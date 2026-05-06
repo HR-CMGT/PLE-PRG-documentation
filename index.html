@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMGT Projecten — Statistieken</title>
+
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>CMGT Projecten — Statistieken</h1>
+        <p>Live statistieken op basis van de projectenserver API</p>
+    </header>
+
+    <!-- Laad-indicator (zichtbaar tijdens het ophalen van data) -->
+    <div id="loading">Data laden…</div>
+
+    <!-- Foutmelding (alleen zichtbaar bij een fout) -->
+    <p id="error" hidden></p>
+
+    <!-- Hoofd-dashboard (verborgen totdat de data geladen is) -->
+    <main id="dashboard" hidden>
+
+        <!-- Samenvatting -->
+        <div class="summary-card">
+            Totaal aantal projecten: <strong id="total-count">–</strong>
+        </div>
+
+        <!-- Rij 1: Tags en Jaren -->
+        <div class="grid-2">
+            <div class="card">
+                <h2>Projecten per tag</h2>
+                <div id="chart-tags"><!-- gevuld door app.js --></div>
+            </div>
+
+            <div class="card">
+                <h2>Projecten per jaar</h2>
+                <div id="chart-years"><!-- gevuld door app.js --></div>
+            </div>
+        </div>
+
+        <!-- Rij 2: Foto's en Woordaantallen -->
+        <div class="grid-2">
+            <div class="card">
+                <h2>Foto's per project <small>(top 50)</small></h2>
+                <div id="table-photos"><!-- gevuld door app.js --></div>
+            </div>
+
+            <div class="card">
+                <h2>Woorden in beschrijving <small>(top 50)</small></h2>
+                <div id="table-words"><!-- gevuld door app.js --></div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        Bron: <a href="https://cmgt.hr.nl/api/projects/" target="_blank" rel="noopener">cmgt.hr.nl/api/projects</a>
+        &mdash; Hogeschool Rotterdam CMGT
+    </footer>
+
+    <!-- ES module: de browser laadt app.js als module zodat import/export werkt -->
+    <script type="module" src="src/app.js"></script>
+</body>
+
+</html>
