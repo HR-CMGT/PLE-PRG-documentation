@@ -5,7 +5,7 @@ Het toont de statistieken van de projecten van de showcase website (https://cmgt
 
 1. Werk de volgende stap uit in de code.
 
-- countProjectsPerYear
+- `countProjectsPerYear`
 
 2. Maak op basis van de bestaande code een `types.js` bestand aan waarin je de types van de data definieert. Importeer deze types in het `index.js` bestand en gebruik ze in de functies.
 
@@ -13,6 +13,6 @@ Het toont de statistieken van de projecten van de showcase website (https://cmgt
 
 4. Werk de volgende stappen uit in de code.
 
-- countPhotosPerProject
-- countWordsInDescription
+- `countPhotosPerProject`
+- `countWordsInDescription`
 
